@@ -1,6 +1,6 @@
 SQL_CRIAR_TABELA = """
     CREATE TABLE IF NOT EXISTS usuario (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        id_usuario INTEGER PRIMARY KEY AUTOINCREMENT,
         nome TEXT NOT NULL,
         cpf TEXT NOT NULL UNIQUE,
         data_nascimento DATE NOT NULL,
@@ -17,7 +17,7 @@ SQL_INSERIR = """
 """
 
 SQL_OBTER_TODOS = """
-    SELECT id, nome, cpf, data_nascimento, endereco, telefone, email
+    SELECT id_usuario, nome, cpf, data_nascimento, endereco, telefone, email
     FROM usuario
     ORDER BY nome
 """
@@ -25,23 +25,23 @@ SQL_OBTER_TODOS = """
 SQL_ALTERAR = """
     UPDATE usuario
     SET nome=?, cpf=?, data_nascimento=?, endereco=?, telefone=?, email=?
-    WHERE id=?
+    WHERE id_usuario=?
 """
 
 SQL_ALTERAR_SENHA = """
     UPDATE usuario
     SET senha=?
-    WHERE id=?
+    WHERE id_usuario=?
 """
 
 SQL_EXCLUIR = """
     DELETE FROM usuario    
-    WHERE id=?
+    WHERE id_usuario=?
 """
 
 SQL_OBTER_POR_ID = """
-    SELECT id, nome, cpf, data_nascimento, endereco, telefone, email
+    SELECT id_usuario, nome, cpf, data_nascimento, endereco, telefone, email
     FROM usuario
-    WHERE id=?
+    WHERE id_usuario=?
 """
 

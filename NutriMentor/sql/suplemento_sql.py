@@ -2,8 +2,8 @@ SQL_CRIAR_TABELA = """
     CREATE TABLE IF NOT EXISTS suplemento (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         nome TEXT NOT NULL,
-        marca TEXT NOT NULL UNIQUE,
-        tipo TEXT NOT NULL UNIQUE
+        marca TEXT NOT NULL,
+        tipo TEXT NOT NULL)
 """
 
 SQL_INSERIR = """

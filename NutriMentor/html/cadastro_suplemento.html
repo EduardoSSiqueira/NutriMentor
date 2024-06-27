@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="\NutriMentor\static\css\bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="css/dataTables.bootstrap5.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Cadastro de Suplementos</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#sidebar"
+            aria-controls="offcanvasExample"
+          >
+            <span class="navbar-toggler-icon" data-bs-target="#sidebar"></span>
+          </button>
+          <a
+            class="navbar-brand me-auto ms-lg-0 ms-3 text-uppercase fw-bold"
+            href="index.html"
+            >NutriMentor</a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#topNavBar"
+            aria-controls="topNavBar"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="topNavBar">
+            <form class="d-flex ms-auto my-3 my-lg-0">
+              <div class="input-group">
+                <input
+                  class="form-control"
+                  type="search"
+                  placeholder="Search"
+                  aria-label="Search"
+                />
+                <button class="btn btn-primary" type="submit">
+                  <i class="bi bi-search"></i>
+                </button>
+              </div>
+            </form>
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle ms-2"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="bi bi-person-fill"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li><a class="dropdown-item" href="#">Entrar</a></li>
+                  <li><a class="dropdown-item" href="#">Sair</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Cadastrar</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+
+      <main class="container my-3">
+        <hr>
+        <hr>
+        <hr>
+        <hr>
+        <form class="row">
+            <div class="col-12 col-lg-6">
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="nome_suplemento" placeholder=" ">
+                    <label for="nome_suplemento">Nome do Suplemento</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="marca" placeholder=" ">
+                    <label for="cpf">Marca</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <textarea id="descricao" class="form-control" style="height: 120px" placeholder=" "></textarea>
+                    <label for="descricao">Descrição do Suplemento</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <textarea id="tipo_suplemento" class="form-control" style="height: 120px" placeholder=" "></textarea>
+                    <label for="tipo_suplemento">Tipo do Suplemento</label>
+                </div>
+            </div>
+                <div>
+                    <a href="/loja/cadastroconfirmado" class="btn btn-danger btn-lg">Criar Meu Cadastro!</a>
+                </div>
+            </div>
+        </form>
+    </main>
+
+
+</body>
+</html>

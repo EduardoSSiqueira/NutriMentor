@@ -1,15 +1,18 @@
 SQL_CRIAR_TABELA = """
     CREATE TABLE IF NOT EXISTS consumo (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        consumo_id INTEGER PRIMARY KEY,
+        usuario_id INTEGER NOT NULL,
+        suplemento_id INTEGER NOT NULL,
         data_consumo DATETIME NOT NULL,
         quantidade INTEGER NOT NULL,
-        cliente_id INTEGER NOT NULL,
-        FOREIGN KEY (id_cliente) REFERENCES cliente(id))
+        FOREIGN KEY (usuario_id) REFERENCES usuario(id),
+        FOREIGN KEY (suplemento_id) REFERENCES suplemento(id)
+)
 """
 
 SQL_INSERIR = """
-    INSERT INTO consumo(data_consumo, quantidade, id_cliente)
-    VALUES (?, ?, ?)
+    INSERT INTO consumo (usuario_id, suplemento_id, data_consumo, quantidade)
+    VALUES (?, ?, ?, ?);
 """
 
 SQL_ALTERAR_DATA_HORA = """
