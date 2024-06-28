@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exibir Perfil</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="d-flex" id="wrapper">
+        <!-- Sidebar -->
+        <div class="bg-dark border-right" id="sidebar-wrapper">
+            <div class="sidebar-heading text-white">
+                <a href="/html/menu_Principal.html" class="list-group-item list-group-item-action bg-dark text-white"> Dashboard</a>
+                </div>
+            <div class="list-group list-group-flush">
+                <a href="perfil.html" class="list-group-item list-group-item-action bg-dark text-white">Exibir Perfil</a>
+                <a href="cadastro_suplemento.html" class="list-group-item list-group-item-action bg-dark text-white">Cadastro Suplemento</a>
+                <a href="registro_consumo.html" class="list-group-item list-group-item-action bg-dark text-white">Registro Consumo</a>
+                <a href="sair.html" class="list-group-item list-group-item-action bg-dark text-white">Sair</a>
+            </div>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                <button class="btn btn-primary" id="menu-toggle">Toggle Menu</button>
+            </nav>
+
+            <div class="container mt-5">
+                <header class="text-center mb-4">
+                    <h1>Perfil do Usuário</h1>
+                </header>
+
+                <section class="mb-4">
+                    <div class="card">
+                        <div class="card-header">
+                            Informações do Usuário
+                        </div>
+                        <div class="card-body">
+                            <form>
+                                <div class="form-group">
+                                    <label for="id">ID:</label>
+                                    <input type="text" class="form-control" id="id" name="id" value="123" readonly>
+                                </div>
+                                <div class="form-group">
+                                    <label for="nome">Nome:</label>
+                                    <input type="text" class="form-control" id="nome" name="nome" value="João da Silva" readonly>
+                                </div>
+                                <div class="form-group">
+                                    <label for="data_nascimento">Data de Nascimento:</label>
+                                    <input type="date" class="form-control" id="data_nascimento" name="data_nascimento" value="1985-08-15" readonly>
+                                </div>
+                                <div class="form-group">
+                                    <label for="cpf">CPF:</label>
+                                    <input type="text" class="form-control" id="cpf" name="cpf" value="123.456.789-00" readonly>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email:</label>
+                                    <input type="email" class="form-control" id="email" name="email" value="joao.silva@example.com" readonly>
+                                </div>
+                                <div class="form-group">
+                                    <label for="telefone">Telefone:</label>
+                                    <input type="text" class="form-control" id="telefone" name="telefone" value="(11) 91234-5678" readonly>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="/static/js/script.js"></script>
+
+</body>
+</html>

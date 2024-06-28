@@ -1,23 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard de Suplementos</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="/static/css/style.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <div class="d-flex" id="wrapper">
         <!-- Sidebar -->
         <div class="bg-dark border-right" id="sidebar-wrapper">
-            <div  class="sidebar-heading text-white">Menu</div>
+            <div class="sidebar-heading text-white">Menu</div>
             <div class="list-group list-group-flush">
-                <a href="/html/perfil.html" class="list-group-item list-group-item-action bg-dark text-white">Exibir Perfil</a>
-                <a href="/html/cadastro_suplemento.html" class="list-group-item list-group-item-action bg-dark text-white">Cadastro Suplemento</a>
-                <a href="/html/registro_consumo.html" class="list-group-item list-group-item-action bg-dark text-white">Registro Consumo</a>
-                <a href="/html/sair.html" class="list-group-item list-group-item-action bg-dark text-white">Sair</a>
+                <a href="#" class="list-group-item list-group-item-action bg-dark text-white">Exibir Perfil</a>
+                <a href="#" class="list-group-item list-group-item-action bg-dark text-white">Cadastro Suplemento</a>
+                <a href="#" class="list-group-item list-group-item-action bg-dark text-white">Registro Consumo</a>
+                <a href="#" id="logout" class="list-group-item list-group-item-action bg-dark text-white">Sair</a>
             </div>
         </div>
         <!-- /#sidebar-wrapper -->
@@ -60,17 +59,8 @@
                                 Estatísticas de Consumo
                             </div>
                             <div class="card-body">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <h5>Total Consumido</h5>
-                                        <p id="total-consumido">0</p>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <h5>Média por Dia</h5>
-                                        <p id="media-por-dia">0</p>
-                                    </div>
-                                </div>
-                                <canvas id="consumoChart"></canvas>
+                                <p>Estatísticas e gráficos podem ser exibidos aqui.</p>
+                                <!-- Aqui você pode adicionar gráficos ou outras estatísticas -->
                             </div>
                         </div>
                     </div>
@@ -87,5 +77,11 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <!-- Custom JavaScript -->
     <script src="/static/js/script.js"></script>
+    <script>
+        document.getElementById('logout').addEventListener('click', function(event) {
+            event.preventDefault(); // Evita o comportamento padrão do link
+            window.location.href = 'index_Cadastro_User.html'; // Redireciona para a página de cadastro
+        });
+    </script>
 </body>
 </html>

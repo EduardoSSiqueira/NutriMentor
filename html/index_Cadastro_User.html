@@ -1,135 +1,81 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/static/css/bootstrap.min.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
-    />
-    <link rel="stylesheet" href="/static/css/dataTables.bootstrap5.min.css" />
-    <link rel="stylesheet" href="/static/css/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/style.css">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container-fluid">
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#sidebar"
-            aria-controls="offcanvasExample"
-          >
-            <span class="navbar-toggler-icon" data-bs-target="#sidebar"></span>
-          </button>
-          <a
-            class="navbar-brand me-auto ms-lg-0 ms-3 text-uppercase fw-bold"
-            >NutriMentor</a
-          >
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#topNavBar"
-            aria-controls="topNavBar"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="topNavBar">
-            <form class="d-flex ms-auto my-3 my-lg-0">
-              <div class="input-group">
-                <input
-                  class="form-control"
-                  type="search"
-                  placeholder="Search"
-                  aria-label="Search"
-                />
-                <button class="btn btn-primary" type="submit">
-                  <i class="bi bi-search"></i>
-                </button>
-              </div>
-            </form>
-            <ul class="navbar-nav">
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle ms-2"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  <i class="bi bi-person-fill"></i>
-                </a>
-                <ul class="dropdown-menu dropdown-menu-end">
-                  <li><a class="dropdown-item" href="#">Entrar</a></li>
-                  <li><a class="dropdown-item" href="#">Sair</a></li>
-                  <li>
-                    <a class="dropdown-item" href="#">Cadastrar</a>
-                  </li>
+            <a class="navbar-brand me-auto ms-lg-0 ms-3 text-uppercase fw-bold" href="#">NutriMentor</a>
+            <div class="collapse navbar-collapse" id="topNavBar">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Entrar</a>
+                    </li>
                 </ul>
-              </li>
-            </ul>
-          </div>
+            </div>
         </div>
-      </nav>
+    </nav>
 
-      <main class="container my-3">
-        <hr>
-        <hr>
-        <hr>
-        <hr>
-        <form class="row">
-            <div class="col-12 col-lg-6">
-                <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="nome" placeholder=" ">
-                    <label for="nome">Nome Completo</label>
-                </div>
-                <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="cpf" placeholder=" ">
-                    <label for="cpf">CPF</label>
-                </div>
-                <div class="form-floating mb-3">
-                    <input type="date" class="form-control" id="dataNascimento" placeholder=" ">
-                    <label for="dataNascimento">Data de Nascimento</label>
-                </div>
-                <div class="form-floating mb-3">
-                    <textarea id="endereco" class="form-control" style="height: 120px" placeholder=" "></textarea>
-                    <label for="endereco">Endereço</label>
+    <main class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        <h3 class="card-title mb-0">Cadastro</h3>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="nome" placeholder=" ">
+                                <label for="nome">Nome Completo</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="cpf" placeholder=" " pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" title="Formato: xxx.xxx.xxx-xx">
+                                <label for="cpf">CPF</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="date" class="form-control" id="dataNascimento" placeholder=" ">
+                                <label for="dataNascimento">Data de Nascimento</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <textarea id="endereco" class="form-control" style="height: 100px" placeholder=" "></textarea>
+                                <label for="endereco">Endereço</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="email" class="form-control" id="email" placeholder=" ">
+                                <label for="email">E-mail</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="telefone" placeholder=" ">
+                                <label for="telefone">Telefone</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="password" class="form-control" id="senha" placeholder=" ">
+                                <label for="senha">Senha</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="password" class="form-control" id="confsenha" placeholder=" ">
+                                <label for="confsenha">Confirmação de Senha</label>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <a href="login.html" class="btn btn-link">Já tem uma conta? Faça login</a>
+                                <button type="submit" class="btn btn-danger btn-lg">Criar Meu Cadastro!</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
-            <div class="col-12 col-lg-6">
-                <div class="form-floating mb-3">
-                    <input type="email" class="form-control" id="email" placeholder=" ">
-                    <label for="email">E-mail</label>
-                </div>
-                <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="telefone" placeholder=" ">
-                    <label for="telefone">Telefone</label>
-                </div>
-                <div class="form-floating mb-3">
-                    <input type="password" class="form-control" id="senha" placeholder=" ">
-                    <label for="senha">Senha</label>
-                </div>
-                <div class="form-floating mb-3">
-                    <input type="password" class="form-control" id="confsenha" placeholder=" ">
-                    <label for="confsenha">Confirmação de Senha</label>
-                </div>
-                <div>
-                    <a href="/loja/cadastroconfirmado" class="btn btn-danger btn-lg">Criar Meu Cadastro!</a>
-                </div>
-            </div>
-        </form>
+        </div>
     </main>
-    <script src="/static/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.2/dist/chart.min.js"></script>
-    <script src="/static/js/jquery-3.5.1.js"></script>
-    <script src="/static/js/jquery.dataTables.min.js"></script>
-    <script src="/static/js/dataTables.bootstrap5.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="/static/js/script.js"></script>
 </body>
 </html>
