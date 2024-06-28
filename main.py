@@ -3,8 +3,16 @@ from fastapi import FastAPI, Request
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 import uvicorn
+from repositories.UsuarioRepo import UsuarioRepo
 from routes.RootRouter import router as rootRouter
+from util. seguranca import atualizar_cookie_autenticacao
+
+UsuarioRepo. criar_tabela()
+UsuarioRepo. criar_administrador_padrao()
+UsuarioRepo. criar_usuario_padrao()
+
 app = FastAPI()
+app.middleware("http")(atualizar_cookie_autenticacao)
 
 app.mount(path="/static", app=StaticFiles(directory="static"),name="static")
 

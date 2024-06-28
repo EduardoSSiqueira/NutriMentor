@@ -49,8 +49,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Exemplo de dados
   const suplementosConsumidos = [
-      { id: 1, nome: 'Whey Protein', marca: 'Marca A', dataConsumo: '2023-01-01', quantidade: 30 },
-      { id: 2, nome: 'Creatina', marca: 'Marca B', dataConsumo: '2023-01-05', quantidade: 5 },
+      { id: 1, nome: 'Whey Protein', marca: 'Marca A', tipo: 'Pilula' },
+      { id: 2, nome: 'Creatina', marca: 'Marca B', tipo: 'Pó' },
       // Adicione mais dados conforme necessário
   ];
 
@@ -60,8 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <td>${suplemento.id}</td>
           <td>${suplemento.nome}</td>
           <td>${suplemento.marca}</td>
-          <td>${suplemento.dataConsumo}</td>
-          <td>${suplemento.quantidade}</td>
+          <td>${suplemento.tipo}</td>
       `;
       tableBody.appendChild(row);
   });
@@ -78,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const consumoChart = new Chart(ctx, {
       type: 'line',
       data: {
-          labels: suplementosConsumidos.map(suplemento => suplemento.dataConsumo),
+          labels: suplementosConsumidos.map(suplemento => suplemento.tipo),
           datasets: [{
               label: 'Quantidade Consumida',
               data: suplementosConsumidos.map(suplemento => suplemento.quantidade),

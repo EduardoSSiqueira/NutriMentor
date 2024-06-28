@@ -108,3 +108,50 @@ class UsuarioRepo:
             return False
 
 
+    @classmethod
+    def obter_por_email (cls, email: str) -> Optional[Usuario] :
+        with obter_conexao() as conexao:
+            cursor = conexao. cursor ()
+            tupla = cursor. execute(SQL_OBTER_POR_EMAIL, (email,)).fetchone()
+            if tupla:
+                objeto = Usuario(
+                    id=tupla[0], nome=tupla[1], email=tupla[2],
+                    admin=tupla[3]
+                )
+                return objeto
+    @classmethod
+    def obter_senha_por_email(cls, email: str) -> Optional[str]:
+        with obter_conexao() as conexao:
+            cursor = conexao.cursor()
+            resultado = cursor. execute(SQL_OBTER_SENHA_POR_EMAIL, (email,)).fetchone ()
+            if resultado:
+                return str(resultado [0])
+            
+
+    @classmethod
+    def existe_email(cls, email: str) -> Optional[str]:
+        with obter_conexao() as conexao:
+            cursor = conexao.cursor()
+            resultado = cursor. execute(SQL_EXISTE_EMAIL, (email, )) .fetchone()
+            if resultado:
+                return bool(resultado[0])
+
+    @classmethod
+    def criar_administrador_padrao(cls) -> Optional[str]:
+        try:
+            with obter_conexao() as conexao:
+                cursor = conexao. cursor ()
+                cursor . execute(SQL_INSERIR_ADMINISTRADOR_PADRAO)
+                return cursor. rowcount > 0
+        except sqlite3.Error:
+            return False
+    
+    @classmethod
+    def criar_usuario_padrao(cls) -> Optional[str]:
+        try:
+            with obter_conexao() as conexao:
+                cursor = conexao. cursor ()
+                cursor. execute(SQL_INSERIR_USUARIO_PADRAO)
+                return cursor.rowcount > 0
+        except sqlite3. Error:
+            return False

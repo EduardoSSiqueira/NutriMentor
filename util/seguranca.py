@@ -54,3 +54,9 @@ async def atualizar_cookie_autenticacao(request: Request, call_next) :
             samesite="lax",
         )
     return response
+
+def gerar_token(length: int = 32) -> str:
+    try:
+        return secrets.token_hex(length)
+    except ValueError:
+        return ""
