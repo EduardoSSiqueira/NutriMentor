@@ -4,4 +4,4 @@ services:
     container_name: NutriMentor.cachoeiro.es
     build: .
     ports:
-      - "8070:8000"
+      - "8064:8000"
