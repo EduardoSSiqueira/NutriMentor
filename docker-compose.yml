@@ -1,7 +1,7 @@
 version: '3.8'
 services:
   web:
-    container_name: NutriMentor.cachoeiro.es
+    container_name: NutriMentor
     build: .
     ports:
       - "8064:8000"
