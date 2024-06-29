@@ -9,84 +9,96 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    <div class="d-flex" id="wrapper">
-        <!-- Sidebar -->
-        <div class="bg-dark border-right" id="sidebar-wrapper">
-            <div  class="sidebar-heading text-white">Menu</div>
-            <div class="list-group list-group-flush">
-                <a href="/html/perfil.html" class="list-group-item list-group-item-action bg-dark text-white">Exibir Perfil</a>
-                <a href="/html/cadastro_suplemento.html" class="list-group-item list-group-item-action bg-dark text-white">Cadastro Suplemento</a>
-                <a href="/html/registro_consumo.html" class="list-group-item list-group-item-action bg-dark text-white">Registro Consumo</a>
-                <a href="/html/sobre.html" class="list-group-item list-group-item-action bg-dark text-white">Sobre</a>
-                <a href="/html/sair.html" class="list-group-item list-group-item-action bg-dark text-white">Sair</a>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand" href="#">Dashboard de Suplementos</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/html/perfil.html">Exibir Perfil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/html/cadastro_suplemento.html">Cadastro Suplemento</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/html/registro_consumo.html">Registro Consumo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/html/sobre.html">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/html/sair.html">Sair</a>
+                    </li>
+                </ul>
             </div>
-        </div>
-        <!-- /#sidebar-wrapper -->
+        </nav>
+    </header>
 
-        <!-- Page Content -->
-        <div id="page-content-wrapper">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-                <button class="btn btn-primary" id="menu-toggle">Toggle Menu</button>
-            </nav>
-
-            <div class="container-fluid">
-                <h1 class="mt-4">Dashboard de Suplementos Consumidos</h1>
-                <div class="row mt-4">
-                    <div class="col-lg-6">
-                        <div class="card mb-4">
-                            <div class="card-header">
-                                Suplementos Consumidos Recentemente
-                            </div>
-                            <div class="card-body">
-                                <table class="table table-bordered">
-                                    <thead>
-                                        <tr>
-                                            <th>ID</th>
-                                            <th>Nome</th>
-                                            <th>Marca</th>
-                                            <th>Data Consumo</th>
-                                            <th>Quantidade</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <!-- Dados dos suplementos consumidos serão inseridos aqui -->
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
+    <div class="container content">
+        <h1 class="mt-4">Dashboard de Suplementos Consumidos</h1>
+        <div class="row mt-4">
+            <div class="col-lg-6">
+                <div class="card mb-4">
+                    <div class="card-header">
+                        Suplementos Consumidos Recentemente
                     </div>
-                    <div class="col-lg-6">
-                        <div class="card mb-4">
-                            <div class="card-header">
-                                Estatísticas de Consumo
+                    <div class="card-body">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Nome</th>
+                                    <th>Marca</th>
+                                    <th>Data Consumo</th>
+                                    <th>Quantidade</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Dados dos suplementos consumidos serão inseridos aqui -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="card mb-4">
+                    <div class="card-header">
+                        Estatísticas de Consumo
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h5>Total Consumido</h5>
+                                <p id="total-consumido">0</p>
                             </div>
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <h5>Total Consumido</h5>
-                                        <p id="total-consumido">0</p>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <h5>Média por Dia</h5>
-                                        <p id="media-por-dia">0</p>
-                                    </div>
-                                </div>
-                                <canvas id="consumoChart"></canvas>
+                            <div class="col-md-6">
+                                <h5>Média por Dia</h5>
+                                <p id="media-por-dia">0</p>
                             </div>
                         </div>
+                        <canvas id="consumoChart"></canvas>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- /#page-content-wrapper -->
     </div>
-    <!-- /#wrapper -->
 
-    <!-- Bootstrap core JavaScript -->
+    <footer>
+        <div class="container">
+            <p>Eduardo Siqueira e Diego Ravani</p>
+            <p>Gerenciador de consumo suplementos®</p>
+            <p>Copyright © 2024</p>
+            <p>Todos os direitos reservados</p>
+        </div>
+    </footer>
+
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <!-- Custom JavaScript -->
+    
     <script src="/static/js/script.js"></script>
 </body>
 </html>

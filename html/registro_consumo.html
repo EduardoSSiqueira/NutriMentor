@@ -8,56 +8,73 @@
     <link rel="stylesheet" href="/static/css/style.css">
 </head>
 <body>
-    <div class="d-flex" id="wrapper">
-        <!-- Sidebar -->
-        <div class="bg-dark border-right" id="sidebar-wrapper">
-            <div class="sidebar-heading text-white">
-            <a href="/html/menu_Principal.html" class="list-group-item list-group-item-action bg-dark text-white"> Dashboard</a>
-            </div>
-            <div class="list-group list-group-flush">
-                <a href="index.html" class="list-group-item list-group-item-action bg-dark text-white">Exibir Perfil</a>
-                <a href="/html/cadastro_suplemento.html" class="list-group-item list-group-item-action bg-dark text-white">Cadastro Suplemento</a>
-                <a href="/html/registro_consumo.html" class="list-group-item list-group-item-action bg-dark text-white">Registro Consumo</a>
-                <a href="/html/sobre.html" class="list-group-item list-group-item-action bg-dark text-white">Sobre</a>
-                <a href="/html/sair.html" class="list-group-item list-group-item-action bg-dark text-white">Sair</a>
-            </div>
-        </div>
-        <!-- /#sidebar-wrapper -->
 
-        <!-- Page Content -->
-        <div id="page-content-wrapper">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-                <button class="btn btn-primary" id="menu-toggle">Toggle Menu</button>
-            </nav>
-
-            <div class="container-fluid">
-                <h1 class="mt-4">Registro de Consumo</h1>
-                <form>
-                    <div class="form-group">
-                        <label for="usuario">Usuário</label>
-                        <input type="text" class="form-control" id="usuario" placeholder="Nome do usuário">
-                    </div>
-                    <div class="form-group">
-                        <label for="suplemento">Suplemento</label>
-                        <input type="text" class="form-control" id="suplemento" placeholder="Nome do suplemento">
-                    </div>
-                    <div class="form-group">
-                        <label for="data">Data de Consumo</label>
-                        <input type="date" class="form-control" id="data">
-                    </div>
-                    <div class="form-group">
-                        <label for="data">Quantidade Consumida</label>
-                        <input type="text" class="form-control" id="Quantidade">
-                    </div>
-                    <button type="submit" class="btn btn-primary">Registrar Consumo</button>
-                </form>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">NutriMentor</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/html/menu_Principal.html">Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/html/perfil.html">Exibir Perfil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/html/cadastro_suplemento.html">Cadastro Suplemento</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/html/registro_consumo.html">Registro Consumo</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/html/sobre.html">Sobre</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/html/sair.html">Sair</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-        <!-- /#page-content-wrapper -->
+        </nav>
+    </header>
+
+    <div class="container-fluid">
+        <h1 class="mt-4">Registro de Consumo</h1>
+        <form>
+            <div class="form-group">
+                <label for="usuario">Usuário</label>
+                <input type="text" class="form-control" id="usuario" placeholder="Nome do usuário">
+            </div>
+            <div class="form-group">
+                <label for="suplemento">Suplemento</label>
+                <input type="text" class="form-control" id="suplemento" placeholder="Nome do suplemento">
+            </div>
+            <div class="form-group">
+                <label for="data">Data de Consumo</label>
+                <input type="date" class="form-control" id="data">
+            </div>
+            <div class="form-group">
+                <label for="quantidade">Quantidade Consumida</label>
+                <input type="text" class="form-control" id="quantidade">
+            </div>
+            <button type="submit" class="btn btn-primary">Registrar Consumo</button>
+        </form>
     </div>
-    <!-- /#wrapper -->
 
-    <!-- Bootstrap core JavaScript -->
+    <footer>
+        <div class="container">
+            <p>Eduardo Siqueira e Diego Ravani</p>
+            <p>Gerenciador de consumo suplementos®</p>
+            <p>Copyright © 2024</p>
+            <p>Todos os direitos reservados</p>
+        </div>
+    </footer>
+
+   >
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

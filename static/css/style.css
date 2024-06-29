@@ -86,4 +86,58 @@ button {
   margin-bottom: 20px;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f7f9fc;
+}
+header .navbar {
+  background-color: #007bff;
+}
+header .navbar-brand,
+header .nav-link {
+  color: #fff !important;
+}
+.content {
+  flex: 1;
+}
+.card-header {
+  background-color: #007bff;
+  color: #fff;
+}
+.card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+footer{
+  background-color: #007bff;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+footer p {
+  margin: 5px 0;
+}
 
+
+body {
+  overflow-x: hidden; 
+}
+.navbar {
+  background-color: #343a40; 
+  color: #ffffff; 
+}
+.navbar-brand {
+  font-weight: bold;
+}
+.navbar-nav .nav-item .nav-link {
+  color: #ffffff; 
+}
+.navbar-nav .nav-item .nav-link:hover {
+  color: #cccccc; 
+}
+#page-content-wrapper {
+  padding-top: 20px; 
+  background-color: #f8f9fa;
+  min-height: 100vh; 
+}
