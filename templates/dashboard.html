@@ -1,0 +1,55 @@
+{% extends 'baseMenuPrincipal.html' %}
+
+{% block title %}Dashboard de Suplementos - NutriMentor{% endblock %}
+
+{% block content %}
+
+<div class="container content">
+    <h1 class="mt-4">Dashboard de Suplementos Consumidos</h1>
+    <div class="row mt-4">
+        <div class="col-lg-6">
+            <div class="card mb-4">
+                <div class="card-header">
+                    Suplementos Consumidos Recentemente
+                </div>
+                <div class="card-body">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nome</th>
+                                <th>Marca</th>
+                                <th>Data Consumo</th>
+                                <th>Quantidade</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Dados dos suplementos consumidos serão inseridos aqui -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="card mb-4">
+                <div class="card-header">
+                    Estatísticas de Consumo
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h5>Total Consumido</h5>
+                            <p id="total-consumido">0</p>
+                        </div>
+                        <div class="col-md-6">
+                            <h5>Média por Dia</h5>
+                            <p id="media-por-dia">0</p>
+                        </div>
+                    </div>
+                    <canvas id="consumoChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

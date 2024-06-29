@@ -22,6 +22,56 @@ async def get_root(
     )
 
 
+@router.get("/Menu", response_class=HTMLResponse)
+async def get_root(
+    request: Request,
+    usuario: Usuario = Depends (obter_usuario_logado),
+):
+    return templates.TemplateResponse(
+        "dashboard.html",
+        {"request": request,"usuario" : usuario},
+    )
+
+@router.get("/cadastroSuplemento", response_class=HTMLResponse)
+async def get_templates(
+    request: Request,
+    usuario: Usuario = Depends (obter_usuario_logado),
+):
+    return templates.TemplateResponse(
+        "cadastroSuplemento.html",
+        {"request": request,"usuario" : usuario},
+    )
+
+@router.get("/perfil", response_class=HTMLResponse)
+async def get_templates(
+    request: Request,
+    usuario: Usuario = Depends (obter_usuario_logado),
+):
+    return templates.TemplateResponse(
+        "perfil.html",
+        {"request": request,"usuario" : usuario},
+    )
+
+@router.get("/RegistroConsumo", response_class=HTMLResponse)
+async def get_templates(
+    request: Request,
+    usuario: Usuario = Depends (obter_usuario_logado),
+):
+    return templates.TemplateResponse(
+        "registro_consumo.html",
+        {"request": request,"usuario" : usuario},
+    )
+
+@router.get("/SobreProjeto", response_class=HTMLResponse)
+async def get_templates(
+    request: Request,
+    usuario: Usuario = Depends (obter_usuario_logado),
+):
+    return templates.TemplateResponse(
+        "sobre.html",
+        {"request": request,"usuario" : usuario},
+    )
+
 
 @router.get("/login", response_class=HTMLResponse)
 async def get_login(
@@ -32,6 +82,23 @@ async def get_login(
         "root/login.html",
         {"request": request, "usuario": usuario},
     )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @router.post("/login", response_class=RedirectResponse)
 async def post_login(

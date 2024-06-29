@@ -1,0 +1,32 @@
+{% extends 'baseMenuPrincipal.html' %}
+
+{% block title %}Registro de Consumo - NutriMentor{% endblock %}
+
+{% block content %}
+
+    <div class="container">
+        <div class="page-content-wrapper">
+            <h1 class="mt-5">Registro de Consumo</h1>
+            <form>
+                <div class="form-group">
+                    <label for="usuario">Usuário</label>
+                    <input type="text" class="form-control" id="usuario" placeholder="Nome do usuário">
+                </div>
+                <div class="form-group">
+                    <label for="suplemento">Suplemento</label>
+                    <input type="text" class="form-control" id="suplemento" placeholder="Nome do suplemento">
+                </div>
+                <div class="form-group">
+                    <label for="data">Data de Consumo</label>
+                    <input type="date" class="form-control" id="data">
+                </div>
+                <div class="form-group">
+                    <label for="quantidade">Quantidade Consumida</label>
+                    <input type="text" class="form-control" id="quantidade">
+                </div>
+                <button type="submit" class="btn btn-primary">Registrar Consumo</button>
+            </form>
+        </div>
+    </div>
+
+{% endblock content %}

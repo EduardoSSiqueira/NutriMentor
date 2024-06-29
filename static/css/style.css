@@ -1,29 +1,68 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
+
 body,
 button {
   font-family: "Inter", sans-serif;
 }
+
 :root {
   --offcanvas-width: 270px;
   --topNavbarHeight: 56px;
+  --primary-color: #007bff;
+  --secondary-color: #343a40;
+  --text-color: #ffffff;
+  --background-color: #f7f9fc;
+  --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--background-color);
+  overflow-x: hidden;
+}
+
+header .navbar {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+}
+
+header .navbar-brand {
+  font-weight: bold;
+  color: var(--text-color) !important;
+}
+
+header .nav-link {
+  color: var(--text-color) !important;
+}
+
+header .nav-link:hover {
+  color: #cccccc !important;
+}
+
 .sidebar-nav {
   width: var(--offcanvas-width);
 }
+
 .sidebar-link {
   display: flex;
   align-items: center;
 }
+
 .sidebar-link .right-icon {
   display: inline-flex;
 }
+
 .sidebar-link[aria-expanded="true"] .right-icon {
   transform: rotate(180deg);
 }
+
 @media (min-width: 992px) {
   body {
     overflow: auto !important;
   }
+
   main {
     margin-left: var(--offcanvas-width);
   }
@@ -31,8 +70,8 @@ button {
   .offcanvas-backdrop::before {
     display: none;
   }
+
   .sidebar-nav {
-    -webkit-transform: none;
     transform: none;
     visibility: visible !important;
     height: calc(100% - var(--topNavbarHeight));
@@ -40,8 +79,6 @@ button {
   }
 }
 
-
-/* Custom styles for the sidebar */
 #wrapper {
   display: flex;
   align-items: stretch;
@@ -52,11 +89,13 @@ button {
   width: 250px;
   margin-left: -250px;
   transition: margin 0.25s ease-out;
+  background-color: var(--secondary-color);
 }
 
 #sidebar-wrapper .sidebar-heading {
   padding: 0.875rem 1.25rem;
   font-size: 1.2rem;
+  color: var(--text-color);
 }
 
 #sidebar-wrapper .list-group {
@@ -65,6 +104,9 @@ button {
 
 #sidebar-wrapper .list-group-item {
   padding: 15px 20px;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  border: none;
 }
 
 #sidebar-wrapper .list-group-item:hover {
@@ -75,69 +117,35 @@ button {
 #page-content-wrapper {
   width: 100%;
   padding: 20px;
+  background-color: var(--background-color);
+  min-height: 100vh;
 }
 
 #wrapper.toggled #sidebar-wrapper {
   margin-left: 0;
 }
 
-/* Custom styles for the content */
 .card {
   margin-bottom: 20px;
+  box-shadow: var(--card-shadow);
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  background-color: #f7f9fc;
+.card-header {
+  background-color: var(--primary-color);
+  color: var(--text-color);
 }
-header .navbar {
-  background-color: #007bff;
-}
-header .navbar-brand,
-header .nav-link {
-  color: #fff !important;
-}
+
 .content {
   flex: 1;
 }
-.card-header {
-  background-color: #007bff;
-  color: #fff;
-}
-.card {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-footer{
-  background-color: #007bff;
-  color: #fff;
+
+footer {
+  background-color: var(--primary-color);
+  color: var(--text-color);
   padding: 20px 0;
   text-align: center;
 }
+
 footer p {
   margin: 5px 0;
-}
-
-
-body {
-  overflow-x: hidden; 
-}
-.navbar {
-  background-color: #343a40; 
-  color: #ffffff; 
-}
-.navbar-brand {
-  font-weight: bold;
-}
-.navbar-nav .nav-item .nav-link {
-  color: #ffffff; 
-}
-.navbar-nav .nav-item .nav-link:hover {
-  color: #cccccc; 
-}
-#page-content-wrapper {
-  padding-top: 20px; 
-  background-color: #f8f9fa;
-  min-height: 100vh; 
 }

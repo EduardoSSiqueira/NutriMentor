@@ -1,0 +1,47 @@
+{% extends 'baseMenuPrincipal.html' %}
+
+{% block title %}Cadastro Suplemento - NutriMentor{% endblock %}
+
+{% block content %}
+    <div class="container mt-5">
+        <header class="text-center mb-4">
+            <h1>Gerenciamento de Suplementos Alimentares</h1>
+        </header>
+
+        <section class="mb-4">
+            <h2>Adicionar Novo Suplemento</h2>
+            <form id="suplemento-form">
+                <div class="form-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" class="form-control" id="nome" name="nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="marca">Marca:</label>
+                    <input type="text" class="form-control" id="marca" name="marca" required>
+                </div>
+                <div class="form-group">
+                    <label for="tipo">Tipo:</label>
+                    <input type="text" class="form-control" id="tipo" name="tipo" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Adicionar</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Lista de Suplementos</h2>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Marca</th>
+                        <th>Tipo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Dados dos suplementos serão inseridos aqui -->
+                </tbody>
+            </table>
+        </section>
+    </div>
+{% endblock %}
