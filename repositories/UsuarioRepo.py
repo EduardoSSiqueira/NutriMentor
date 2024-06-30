@@ -155,3 +155,14 @@ class UsuarioRepo:
                 return cursor.rowcount > 0
         except sqlite3. Error:
             return False
+        
+    @classmethod
+    def obter_por_token(cls, token: str) -> Optional[Usuario]:
+        with obter_conexao() as conexao:
+            cursor = conexao.cursor()
+            tupla = cursor.execute(SQL_OBTER_POR_TOKEN, (token,)).fetchone()
+        if tupla:
+            objeto = Usuario(
+                id=tupla[0], nome=tupla[1], email=tupla[2]
+            )
+            return objeto
