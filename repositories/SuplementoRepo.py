@@ -1,3 +1,4 @@
+import json
 import sqlite3
 from typing import List, Optional
 from models.Suplemento import Suplemento
@@ -94,3 +95,11 @@ class SuplementoRepo:
         except sqlite3.Error as ex:
             print(ex)
             return None
+
+    @classmethod
+    def inserir_suplemento_json(cls, arquivo_json: str):
+        if SuplementoRepo.obter_quantidade() == 0:
+            with open(arquivo_json, "r", encoding="utf-8") as arquivo:
+                suplementos = json.load(arquivo)
+                for suplemento in suplementos:
+                    SuplementoRepo.inserir(Suplemento(**suplemento))

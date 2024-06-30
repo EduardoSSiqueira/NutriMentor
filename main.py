@@ -17,6 +17,7 @@ UsuarioRepo.criar_usuario_padrao()
 ConsumoRepo.criar_tabela()
 SuplementoRepo.criar_tabela()
 
+SuplementoRepo.inserir_suplemento_json("sql/suplementos.json")
 
 
 

@@ -1,0 +1,32 @@
+[
+     
+      {
+        "id": 1,
+        "nome": "Whey Protein",
+        "marca": "Optimum Nutrition",
+        "tipo": "Proteína"
+      },
+
+      {
+        "id": 2,
+        "nome": "Creatina",
+        "marca": "Universal Nutrition",
+        "tipo": "Creatina"
+      },
+
+      {
+        "id": 3,
+        "nome": "BCAA",
+        "marca": "Scivation",
+        "tipo": "Aminoácidos"
+      },
+
+      {
+        "id": 4,
+        "nome": "Multivitamínico",
+        "marca": "Centrum",
+        "tipo": "Vitaminas"
+      }
+    
+  
+]   
